@@ -11,6 +11,8 @@ gem 'jquery-rails'
 gem 'neat'
 gem 'pg'
 gem 'rails', '4.2.1'
+# https://github.com/thoughtbot/refills
+gem 'refills'
 gem 'sass-rails', '~> 5.0'
 gem 'simple_form'
 gem 'sorcery'
