@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
+  get 'landing/index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
+  root 'landing#index'
 
   resource :user_session, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create]
+
+  get 'home' => 'home#index', as: 'home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

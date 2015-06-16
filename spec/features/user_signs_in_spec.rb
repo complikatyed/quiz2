@@ -19,9 +19,10 @@ feature "User signs in" do
     page.should have_content("I'm done for today.")
     # Smoke testing Sign Out:
     click_on "I'm done for today."
-    page.should have_content("You have been signed out")
     page.should have_content("I'm a returning nerd!")
     page.should_not have_content("I'm done for today.")
+    page.should_not have_content("Welcome back dude")
+    page.should have_content("welcome to QUIZLYTICS a quizbowl point tracking system")
   end
 
   scenario "Returning user attempts signin with incorrect password" do

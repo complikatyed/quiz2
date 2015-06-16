@@ -15,7 +15,9 @@ feature "User Signs Up" do
     fill_in "Password confirmation", with: "password1"
     click_button "Sign me up, coach!"
     page.should have_content("Welcome, Bob")
+    page.should_not have_content("welcome to QUIZLYTICS a quizbowl point tracking system")
     click_on "I'm done for today."
+    page.should have_content("welcome to QUIZLYTICS a quizbowl point tracking system")
     click_on "I'm a returning nerd!"
     fill_in "Email", with: "bob@example.com"
     fill_in "Password", with: "password1"
