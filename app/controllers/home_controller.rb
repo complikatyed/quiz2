@@ -9,6 +9,7 @@ class HomeController < ApplicationController
   end
 
   def index
+    @user = User.find(session[:user_id]).name
   end
 
   def action
