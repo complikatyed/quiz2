@@ -1,0 +1,10 @@
+%h1 Thanks for joining the team!
+
+%h2 Please provide your information below:
+=@player.errors.full_messages
+=simple_form_for @player do |f|
+  = f.input :first_name
+  = f.input :last_name
+  = f.input :email
+  = f.input :cell
+  = f.button :submit, "I'm ready to play!"

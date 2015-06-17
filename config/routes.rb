@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'landing#index'
 
+  resources :players, only: [:new, :create, :show, :destroy]
   resource :user_session, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create]
 
