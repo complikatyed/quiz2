@@ -13,7 +13,7 @@ feature "User signs in" do
     fill_in "Email", with: user.email
     fill_in "Password", with: "password1"
     click_button "Let's do this!"
-    page.should have_content("Welcome back, Jackson")
+    page.should have_content("Welcome, Jackson")
     page.should_not have_content("I'm a returning nerd!")
     page.should_not have_content("I'm a new nerd!")
     page.should have_content("I'm done for today.")
@@ -21,7 +21,7 @@ feature "User signs in" do
     click_on "I'm done for today."
     page.should have_content("I'm a returning nerd!")
     page.should_not have_content("I'm done for today.")
-    page.should_not have_content("Welcome back dude")
+    page.should_not have_content("Welcome dude")
     page.should have_content("welcome to QUIZLYTICS a quizbowl point tracking system")
   end
 
@@ -36,7 +36,7 @@ feature "User signs in" do
     field_labeled("Email").value.should == user.email
     fill_in "Password", with: "password1"
     click_button "Let's do this!"
-    page.should have_content("Welcome back, Andre")
+    page.should have_content("Welcome, Andre")
   end
 
   scenario "User signs in with wrong email" do

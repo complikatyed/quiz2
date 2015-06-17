@@ -22,7 +22,7 @@ feature "User Signs Up" do
     fill_in "Email", with: "bob@example.com"
     fill_in "Password", with: "password1"
     click_button "Let's do this!"
-    page.should have_content("Welcome back, Bob")
+    page.should have_content("Welcome, Bob")
   end
 
   scenario "Error Path" do
