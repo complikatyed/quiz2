@@ -1,6 +1,6 @@
 %h1 Welcome, #{@user}
 
 %h2 What's the plan?
-= button_to "I need to create (or update) my player profile"
-
-= button_to "I'd like to check my stats"
+%ul
+  %li= link_to "I need to create my player profile", new_player_path
+  %li= link_to "I'd like to check my stats"

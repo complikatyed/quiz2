@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   before_action :load_user, except: [:index, :edit, :update]
-  before_action :require_login, except: [:index, :show]
+  before_action :require_login, except: [:show]
 
   def check_auth
     unless logged_in?
