@@ -5,4 +5,14 @@ class Player < ActiveRecord::Base
   validates :first_name, :last_name, length: { minimum: 2 }
   validates :cell, format: { :with => /\A(\+1)?[0-9]{10}\z/, :message => "Not a valid 10-digit telephone number" }
   validates :email, format: { with: /.+@.+\..+/, message: "must be an email address" }
+
+  before_validation :set_defaults,  on: :create
+
+  private
+
+  def set_defaults
+    self.points ||= 0
+    self.negs ||= 0
+  end
+
 end

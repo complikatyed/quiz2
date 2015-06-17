@@ -5,8 +5,8 @@ class CreatePlayers < ActiveRecord::Migration
       t.string :last_name
       t.string :email
       t.string :cell
-      t.integer :points
-      t.integer :negs
+      t.integer :points, :default => 0
+      t.integer :negs, :default => 0
 
       t.timestamps null: false
     end

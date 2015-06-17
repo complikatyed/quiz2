@@ -21,10 +21,10 @@ ActiveRecord::Schema.define(version: 20150616205008) do
     t.string   "last_name"
     t.string   "email"
     t.string   "cell"
-    t.integer  "points"
-    t.integer  "negs"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "points",     default: 0
+    t.integer  "negs",       default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "users", force: :cascade do |t|
