@@ -6,8 +6,8 @@ RSpec.describe Player, type: :model do
     it { should validate_length_of(:last_name).is_at_least(2) }
     it { should validate_presence_of(:email) }
     it { should validate_presence_of(:cell) }
-    it { should validate_presence_of(:points) }
-    it { should validate_presence_of(:negs) }
+    it { should validate_numericality_of(:points)}
+    it { should validate_numericality_of(:negs) }
     it "should allow valid values for email" do
       should allow_value("kmr@katyerussell.com", "a@b.co.uk", "jimbob+hash@example.com").for(:email)
     end
