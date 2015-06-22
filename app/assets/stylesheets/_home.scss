@@ -1,3 +1,45 @@
-body {
-  @include background(linear-gradient(white, lightblue, white) left no-repeat);
+.home_base {
+  @include outer-container;
+  padding: 40px 0px 40px 0px;
 }
+
+.left_home {
+  @include span-columns(3);
+    @include shift(1);
+}
+
+.wide_home {
+  @include span-columns(7);
+  text-align: center;
+}
+
+.wide_home_left {
+  @include span-columns(3 of 7);
+  margin: 0px 5px 0px 50px;
+  text-align: center;
+}
+
+.wide_home_right {
+  @include span-columns(3 of 7);
+  text-align:center;
+  margin-right: 20px;
+}
+
+img.narrow {
+  margin-left: 30px;
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 2em;
+  padding: 20px 0px 20px 0px;
+  text-align: center;
+  color: #21316E;
+}
+
+input {
+  width: 175px;
+  margin-bottom: 25px;
+}
+
+
