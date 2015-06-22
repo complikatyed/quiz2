@@ -1,0 +1,27 @@
+<div class="home_base">
+
+  <div class="left_home">
+    <%= image_tag("HFA.jpg", :alt => "Hume-Fogg Magnet") %>
+  </div>
+
+  <div class="wide_home">
+    <h1>What's the plan, <%= @user %>?</h1>
+
+    <div class="wide_home_left">
+      <ul>
+        <li><%= button_to "Add a new player", new_player_path %></li>
+        <li><%= button_to "Update player info" %></li>
+        <li><%= button_to "Review player stats"%></li>
+      <ul>
+    </div>
+
+    <div class="wide_home_right">
+      <ul>
+        <li><%= button_to "Create teams"%></li>
+        <li><%= button_to "Set up a game"%></li>
+        <li><%= button_to "Start playing"%></li>
+      <ul>
+    </div>
+
+  </div>
+</div>

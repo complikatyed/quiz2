@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title>Quizlytics</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header class="centered-navigation" role="banner">
+      <div class="centered-navigation-wrapper">
+      <a href="#" class="mobile-seal">
+        <%= image_tag("seal_small.png", :alt => "Hume-Fogg Magnet seal") %>
+      </a>
+      <a href="#" class="centered-navigation-mobile-menu">MENU</a>
+        <nav role="navigation">
+          <ul class="centered-navigation-menu">
+            <% if !logged_in? %>
+              <% unless controller_name == "users" %>
+                <li class="nav-link">
+                  <%= link_to "I'm a new nerd!", new_user_path %>
+                </li>
+              <% end %>
+
+              <li class="nav-link seal">
+                <%= image_tag("seal_small.png", :alt => "Hume-Fogg Magnet seal") %>
+              </li>
+
+              <% unless controller_name == "user_sessions" %>
+                <li class="nav-link">
+                  <%= link_to "I'm a returning nerd!", new_user_session_path %>
+                </li>
+              <% end %>
+
+            <% else %>
+              <li class="nav-link seal">
+                <%= image_tag("seal_small.png", :alt => "Hume-Fogg Magnet seal") %>
+              </li>
+              <li class="nav-link">
+               <%= link_to "I'm done for today.", user_session_path, method: :delete %>
+              </li>
+
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <p class="notice">
+      <%= notice %>
+    </p>
+    <p class="alert">
+      <%= alert %>
+    </p>
+    <%= yield %>
+    <p> </p>
+    <p> </p>
+    <footer class="centered-navigation">
+      <div class="centered-navigation-wrapper">
+        <ul class="centered-navigation-menu">
+<!--           <li class="nav-link">
+            <%= link_to "Katye Russell, 2015", "https://katyerussell.com" %>
+          </li>
+          <li class="nav-link">
+          &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+          </li> -->
+          <li class="nav-link">
+            <%= link_to "View the code on Github", "https://github.com/complikatyed/quizlytics" %>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+  </body>
+</html>
