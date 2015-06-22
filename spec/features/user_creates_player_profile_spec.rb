@@ -1,11 +1,11 @@
 feature "user creates player profile" do
   # As a user
   # In order to represent my student players in the game
-  # I want to create a player.
+  # I want to create a player profile.
 
   # Acceptance Criteria:
-  # * Player must have name, email, cell-phone, points, and negs.
-  # * Player must be publicly visible once saved <-- not sure how this should look
+  # * Player profile must have name, email, cell-phone, points, and negs.
+  # * Player profile must be publicly visible once saved <-- not sure how this should look
 
 
   scenario "happy path create player profile" do
