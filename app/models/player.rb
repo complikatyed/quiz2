@@ -1,4 +1,7 @@
 class Player < ActiveRecord::Base
+  has_many :team_players
+  has_many :teams, through: :team_players
+
 # NEED SOME WAY TO STRIP CELL PHONE NUMBER IN ORDER TO VALIDATE IT...
 
   validates :first_name, :last_name, :email, :cell, presence: true
