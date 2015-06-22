@@ -1,13 +1,4 @@
 Rails.application.routes.draw do
-  get 'game/new'
-
-  get 'game/create'
-
-  get 'game/update'
-
-  get 'game/show'
-
-  get 'landing/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -20,6 +11,15 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
 
   get 'home' => 'home#index', as: 'home'
+  get 'teams/new'
+  get 'teams/create'
+  get 'teams/show'
+  get 'teams/index'
+  get 'game/new'
+  get 'game/create'
+  get 'game/update'
+  get 'game/show'
+  get 'landing/index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
