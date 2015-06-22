@@ -9,8 +9,8 @@
     @include shift(2);
   @include background(radial-gradient(white, #FBF1D0) left repeat);
   text-align: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 70px;
+  margin-bottom: 70px;
   @include border-top-radius(5px);
   @include border-right-radius(5px);
   @include border-bottom-radius(5px);
@@ -28,4 +28,5 @@
   }
 }
 
+// Need to add media queries that include logo font size
 

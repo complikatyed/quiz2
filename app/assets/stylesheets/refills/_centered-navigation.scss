@@ -12,6 +12,7 @@
   $centered-navigation-color: transparentize($base-font-color, 0.3);
   $centered-navigation-color-hover: $base-font-color;
   $centered-navigation-height: 60px;
+  $centered-navigation-height-foot: 40px;
   $centered-navigation-item-padding: 1em;
   $centered-navigation-item-nudge: 2.2em;
   $horizontal-bar-mode: $large-screen;
@@ -126,6 +127,11 @@
       //   padding-right: $centered-navigation-item-padding;
       // }
     }
+  }
+
+  ul.padded,
+  li.padded {
+    padding-top: 10px;
   }
 
   li.seal.nav-link {
