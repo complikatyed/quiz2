@@ -17,7 +17,7 @@
         <nav role="navigation">
           <ul class="centered-navigation-menu">
             <% if !logged_in? %>
-              <% unless controller_name == "users" %>
+              <% unless controller_name.start_with? "user" %>
                 <li class="nav-link">
                   <%= link_to "I'm a new nerd!", new_user_path %>
                 </li>
@@ -27,7 +27,7 @@
                 <%= image_tag("seal_small.png", :alt => "Hume-Fogg Magnet seal") %>
               </li>
 
-              <% unless controller_name == "user_sessions" %>
+              <% unless controller_name.start_with? "user" %>
                 <li class="nav-link">
                   <%= link_to "I'm a returning nerd!", new_user_session_path %>
                 </li>
@@ -58,15 +58,9 @@
     <p> </p>
     <footer class="centered-navigation">
       <div class="centered-navigation-wrapper">
-        <ul class="centered-navigation-menu">
-<!--           <li class="nav-link">
-            <%= link_to "Katye Russell, 2015", "https://katyerussell.com" %>
-          </li>
-          <li class="nav-link">
-          &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
-          </li> -->
-          <li class="nav-link">
-            <%= link_to "View the code on Github", "https://github.com/complikatyed/quizlytics" %>
+        <ul class="centered-navigation-menu padded">
+          <li class="padded">
+            <%= link_to "View the code on Github -  @complikatyed", "https://github.com/complikatyed/quizlytics" %>
           </li>
         </ul>
       </div>
