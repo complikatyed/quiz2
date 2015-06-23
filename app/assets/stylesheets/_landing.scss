@@ -1,6 +1,6 @@
 .outer {
   @include outer-container;
-  @include background-image(url("/assets/hfa_morning.jpg"));
+  @include background-image(url( /assets/hfa_morning.jpg ));
 
 }
 
