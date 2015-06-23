@@ -19,7 +19,7 @@
             <% if !logged_in? %>
               <% unless controller_name.start_with? "user" %>
                 <li class="nav-link">
-                  <%= link_to "I'm a new nerd!", new_users_path %>
+                  <%= link_to "I'm a new nerd!", new_user_path %>
                 </li>
               <% end %>
 
@@ -29,7 +29,7 @@
 
               <% unless controller_name.start_with? "user" %>
                 <li class="nav-link">
-                  <%= link_to "I'm a returning nerd!", new_user_sessions_path %>
+                  <%= link_to "I'm a returning nerd!", new_user_session_path %>
                 </li>
               <% end %>
 
