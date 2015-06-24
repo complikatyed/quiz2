@@ -1,4 +1,4 @@
-feature "user creates player profile" do
+feature "user updates player info" do
   # As a user
   # In order to keep my player profile current
   # I want to update my player profile.
@@ -8,19 +8,15 @@ feature "user creates player profile" do
   # * Player must be publicly visible once saved <-- not sure how this should look
 
 
-  scenario "happy path update player profile" do
+  scenario "happy path update player info" do
     me = Fabricate(:user, name: "Reggie")
     signin_as me
-    click_on "Create a new player profile"
-    page.should have_content("First name *")
-    page.should have_content("Last name *")
-    page.should have_content("Email *")
-    page.should have_content("Cell")
-    fill_in "First name", with: "Reggie"
-    fill_in "Last name", with: "Stevers"
-    fill_in "Email", with: "reggie@exampleemail.com"
-    fill_in "Cell", with: "6155431115"
-    click_on "I'm ready to play!"
+    click_on "Add a new player"
+    fill_in "Player's first name", with: "Reggie"
+    fill_in "Player's last name", with: "Stevers"
+    fill_in "Player's email address", with: "reggie@exampleemail.com"
+    fill_in "Player's cell number - just the ten digits", with: "6155431115"
+    click_on "This player is ready!"
     within("h4") do
       page.should have_content("Reggie S")
     end
@@ -30,7 +26,7 @@ feature "user creates player profile" do
     page.should have_content("Negs: 0")
     signout
     signin_as me
-    click_on "I need to edit my player profile"
+    click_on "Update player info"
         within("h4") do
       page.should have_content("Reggie S")
     end
