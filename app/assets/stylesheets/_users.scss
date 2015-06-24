@@ -1,0 +1,26 @@
+.home_base {
+  @include outer-container;
+  padding: 40px 0px 40px 0px;
+}
+
+.wide_home {
+  @include span-columns(7);
+  text-align: center;
+}
+
+.right_home {
+  @include span-columns(3);
+    @include shift(1);
+}
+
+h1 {
+  font-size: 2em;
+  padding: 5px 0px 5px 0px;
+  text-align: center;
+  color: #21316E;
+}
+
+input {
+  width: 75%;
+  margin-bottom: 25px;
+}
