@@ -1,14 +1,14 @@
-<div class="outer">
+<div class="outer_player">
   <h1>Thanks for choosing to join the team!</h1>
   <div class="center">
 
     <h2>Please provide your information below:</h2>
 
     <%= simple_form_for @player do |f| %>
-      <%= f.text_field :first_name, placeholder: 'Your first name', input_html: { class: 'player' } %>
-      <%= f.text_field :last_name, placeholder: 'Your last name', input_html: { class: 'player' }  %>
-      <%= f.text_field :email, placeholder: 'Your email address', input_html: { class: 'player' }  %>
-      <%= f.text_field :cell, placeholder: 'Your cell phone number', input_html: { class: 'player' }  %>
+      <%= f.text_field :first_name, placeholder: "Player's first name", input_html: { class: 'player' }%>
+      <%= f.text_field :last_name, placeholder: "Player's last name", input_html: { class: 'player' }  %>
+      <%= f.text_field :email, placeholder: "Player's email address", input_html: { class: 'player' }  %>
+      <%= f.text_field :cell, placeholder: "Player's cell number - just the ten digits", input_html: { class: 'player' } %>
       <%= f.button :submit, "This player is ready!" %>
     <% end %>
   </div>
