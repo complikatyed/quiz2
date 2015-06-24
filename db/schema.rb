@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150621175756) do
+ActiveRecord::Schema.define(version: 20150623233300) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,29 @@ ActiveRecord::Schema.define(version: 20150621175756) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "player_games", force: :cascade do |t|
+    t.integer  "player_id"
+    t.integer  "game_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "player_games", ["game_id"], name: "index_player_games_on_game_id", using: :btree
+  add_index "player_games", ["player_id"], name: "index_player_games_on_player_id", using: :btree
+
+  create_table "player_team_games", force: :cascade do |t|
+    t.integer  "player_id"
+    t.integer  "team_game_id"
+    t.integer  "points"
+    t.integer  "negs"
+    t.boolean  "captain"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "player_team_games", ["player_id"], name: "index_player_team_games_on_player_id", using: :btree
+  add_index "player_team_games", ["team_game_id"], name: "index_player_team_games_on_team_game_id", using: :btree
 
   create_table "players", force: :cascade do |t|
     t.string   "first_name"
@@ -30,6 +53,15 @@ ActiveRecord::Schema.define(version: 20150621175756) do
     t.integer  "negs",       default: 0
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "team_games", force: :cascade do |t|
+    t.integer  "team_score"
+    t.integer  "opponent_score"
+    t.boolean  "win"
+    t.datetime "date_played"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "teams", force: :cascade do |t|
@@ -49,4 +81,8 @@ ActiveRecord::Schema.define(version: 20150621175756) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
+  add_foreign_key "player_games", "games"
+  add_foreign_key "player_games", "players"
+  add_foreign_key "player_team_games", "players"
+  add_foreign_key "player_team_games", "team_games"
 end

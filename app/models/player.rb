@@ -1,6 +1,10 @@
 class Player < ActiveRecord::Base
-  has_many :team_players
-  has_many :teams, through: :team_players
+  has_many :player_games
+  has_many :games, through: :player_games
+  has_many :player_teams
+  has_many :teams, through: :player_teams
+  has_many :player_team_games
+  has_many :team_games, through: :player_team_games
 
 # NEED SOME WAY TO STRIP CELL PHONE NUMBER IN ORDER TO VALIDATE IT...
 
