@@ -14,7 +14,7 @@ feature "User Signs Up" do
     fill_in "Password", with: "password1"
     fill_in "Password confirmation", with: "password1"
     click_button "Sign me up, coach!"
-    page.should have_content("Welcome, Bob")
+    page.should have_content("What's the plan, Bob?")
     page.should_not have_content("welcome to QUIZLYTICS a quizbowl point tracking system")
     click_on "I'm done for today."
     page.should have_content("welcome to QUIZLYTICS a quizbowl point tracking system")
@@ -22,7 +22,7 @@ feature "User Signs Up" do
     fill_in "Email", with: "bob@example.com"
     fill_in "Password", with: "password1"
     click_button "Let's do this!"
-    page.should have_content("Welcome, Bob")
+    page.should have_content("What's the plan, Bob?")
   end
 
   scenario "Error Path" do
@@ -42,6 +42,6 @@ feature "User Signs Up" do
     fill_in "Password", with: "password1"
     fill_in "Password confirmation", with: "password1"
     click_on "Sign me up, coach!"
-    page.should have_content("Welcome, Shriya")
+    page.should have_content("What's the plan, Shriya?")
   end
 end
