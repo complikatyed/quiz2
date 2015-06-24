@@ -8,19 +8,35 @@
   text-align: center;
 }
 
-.right_home {
+.right_home_user_session {
   @include span-columns(3);
+
+  img {
+    margin-top: 20px;
+    border: solid $dark-blue 5px;
+    max-width: 100%;
+  }
 }
 
-
-h1 {
-  font-size: 2em;
+h1.user_session,
+h2.user_session {
   padding: 5px 0px 5px 0px;
   text-align: center;
-  color: #21316E;
+  color: $dark-blue;
 }
 
-input {
-  width: 175px;
+h1.user_session {
+  font-size: 2em;
+}
+
+h2.user_session {
+  font-size: 1em;
+  margin-top: 20px;
+}
+
+input#user_email,
+     #user_password,
+     .btn {
+  width: 60%;
   margin-bottom: 25px;
 }

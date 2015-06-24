@@ -4,23 +4,41 @@
 }
 
 .wide_home {
-  @include span-columns(7);
+  @include span-columns(5);
+    @include shift(1);
   text-align: center;
 }
 
 .right_home {
-  @include span-columns(3);
-    @include shift(1);
+  @include span-columns(5);
+
+  img {
+    margin-top: 20px;
+    border: solid $dark-blue 5px;
+    max-width: 100%;
+  }
 }
 
-h1 {
+h1.blue {
   font-size: 2em;
-  padding: 5px 0px 5px 0px;
+  padding-top: 5px;
   text-align: center;
-  color: #21316E;
+  color: $dark-blue;
 }
 
-input {
-  width: 75%;
+h2.blue {
+  font-size: 1em;
+  padding-bottom: 30px;
+  text-align: center;
+  color: $dark-blue;
+}
+
+
+input#user_name,
+     #user_email,
+     #user_password,
+     #user_password_confirmation,
+     .btn {
+  width: 60%;
   margin-bottom: 25px;
 }
