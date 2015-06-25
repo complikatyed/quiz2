@@ -1,0 +1,29 @@
+<h1>HFA Quiz Bowl Players</h1>
+
+<table>
+  <tr>
+    <th>Player</th>
+    <th>Email</th>
+    <th>Cell</th>
+    <th>Points</th>
+    <th>Negs</th>
+    <th></th>
+    <th></th>
+  </tr>
+ 
+<% @players.each do |player| %>
+  <tr>
+    <td><%= player.first_name %> <%= player.last_name[0] %></td>
+    <td><%= player.email%></td>
+    <td><%= player.cell%></td>
+    <td><%= player.points%></td>
+    <td><%= player.negs%></td>
+    <td><%= link_to "Edit", edit_player_path(player) %></td>
+    <td><%= link_to "Remove", player, method: :delete, data: { confirm: "Are you sure?" } %></td>
+  </tr>
+<% end %>
+</table>
+ 
+<br>
+ 
+<%= link_to "New player", new_player_path %>
