@@ -16,22 +16,20 @@ feature "user updates player info" do
     fill_in "Player's last name", with: "Stevers"
     fill_in "Player's email address", with: "reggie@exampleemail.com"
     fill_in "Player's cell number - just the ten digits", with: "6155431115"
-    click_on "This player is ready!"
-    within("h4") do
+    click_on "Player Ready"
+    within("h2") do
       page.should have_content("Reggie S")
     end
-    page.should have_content("Email: reggie@exampleemail.com")
-    page.should have_content("Cell: 6155431115")
+    page.should have_content("reggie@exampleemail.com")
+    page.should have_content("6155431115")
     page.should have_content("Points: 0")
     page.should have_content("Negs: 0")
     signout
     signin_as me
-    click_on "Update player info"
-        within("h4") do
-      page.should have_content("Reggie S")
-    end
-    page.should have_content("Email: reggie@exampleemail.com")
-    page.should have_content("Cell: 6155431115")
+    click_on "View players"
+    page.should have_content("Reggie S")
+    page.should have_content("reggie@exampleemail.com")
+    page.should have_content("6155431115")
     page.should_not have_content("Points: 0")
     page.should_not have_content("Negs: 0")
     # How is the edit process going to work?
