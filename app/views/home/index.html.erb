@@ -5,23 +5,24 @@
   </div>
 
   <div class="wide_home">
-    <h1>What's the plan, <%= @user %>?</h1>
+    <h1 class="blue">What's the plan, <%= @user %>?</h1>
 
     <div class="wide_home_left">
       <ul>
         <li><%= button_to "Add a new player", new_player_path, :class => "button" "main", :method => :get %></li>
-        <li><%= button_to "Update player info", root_path, :class => "button" "main" %></li>
-        <li><%= button_to "Review player stats", root_path, :class => "button" "main" %></li>
+        <li><%= button_to "View players", players_path, :class => "button" "main", :method => :get %></li>
       <ul>
     </div>
-
     <div class="wide_home_right">
       <ul>
         <li><%= button_to "Create teams", root_path, :class => "button" "main" %></li>
         <li><%= button_to "Set up a game", root_path, :class => "button" "main" %></li>
-        <li><%= button_to "Start playing", root_path, :class => "button" "main" %></li>
       <ul>
     </div>
+
+      <ul>
+        <li><%= button_to "Start playing", root_path, :class => "button" "main" %></li>
+      <ul>
 
   </div>
 </div>
