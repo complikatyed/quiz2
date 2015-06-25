@@ -20,3 +20,29 @@ input {
   @include span-columns(4);
     @include shift(4);
 }
+
+.players {
+  width: 75%;
+  margin-left: 50px;
+}
+.narrow {
+  width: 60px;
+}
+
+.wide {
+  width: 200px;
+}
+
+.wider {
+  width: 250px;
+}
+
+.plain {
+  list-style-type: none;
+  display: inline;
+}
+
+.shifted {
+  text-align: center;
+  padding-bottom: 50px;
+}

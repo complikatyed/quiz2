@@ -1,29 +1,32 @@
 <h1>HFA Quiz Bowl Players</h1>
 
-<table>
+<table class="players">
   <tr>
-    <th>Player</th>
-    <th>Email</th>
-    <th>Cell</th>
-    <th>Points</th>
-    <th>Negs</th>
-    <th></th>
-    <th></th>
+    <th class="wide">Player</th>
+    <th class="wider">Email</th>
+    <th class="wide">Cell</th>
+    <th class="narrow">Points</th>
+    <th class="narrow">Negs</th>
+    <th class="narrow"></th>
+    <th class="narrow"></th>
   </tr>
  
 <% @players.each do |player| %>
   <tr>
-    <td><%= player.first_name %> <%= player.last_name[0] %></td>
-    <td><%= player.email%></td>
-    <td><%= player.cell%></td>
-    <td><%= player.points%></td>
-    <td><%= player.negs%></td>
-    <td><%= link_to "Edit", edit_player_path(player) %></td>
-    <td><%= link_to "Remove", player, method: :delete, data: { confirm: "Are you sure?" } %></td>
+    <td class="wide"><%= player.first_name %> <%= player.last_name[0] %></td>
+    <td class="wider"><%= player.email%></td>
+    <td class="wide"><%= player.cell%></td>
+    <td class="narrow"><%= player.points%></td>
+    <td class="narrow"><%= player.negs%></td>
+    <td class="narrow"><%= link_to "Edit", edit_player_path(player) %></td>
+    <td class="narrow"><%= link_to "Remove", player, method: :delete, data: { confirm: "Are you sure?" } %></td>
   </tr>
 <% end %>
 </table>
- 
+
 <br>
- 
-<%= link_to "New player", new_player_path %>
+<ul class="shifted">
+  <li class="plain"><%= link_to "Add a new player", new_player_path %></li>
+  <li class="plain">&nbsp; | &nbsp;</li>
+  <li class="plain"><%= link_to "Return to options page", root_path %></li>
+</ul>
