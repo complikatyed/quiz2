@@ -1,37 +1,35 @@
-<h1 class="blue">HFA Quiz Bowl Players</h1>
-<div class="slogan">
-<%= link_to '"Hume-Fogg, just a bunch of nerds having a good time."', "http://humefogghs.mnps.org/pages/Hume_Fogg_Magnet_High_School" %>
+<div class="outer_player1">
+  <h1 class="blue">HFA Quiz Bowl Players</h1>
+
+  <table class="players">
+    <tr>
+      <th class="wide">Player</th>
+      <th class="wider">Email</th>
+      <th class="wide">Cell</th>
+      <th class="narrow">Points</th>
+      <th class="narrow">Negs</th>
+      <th class="narrow"></th>
+      <th class="narrow"></th>
+    </tr>
+   
+  <% @players.each do |player| %>
+    <tr>
+      <td class="wide"><%= player.first_name %> <%= player.last_name[0] %></td>
+      <td class="wider"><%= player.email%></td>
+      <td class="wide"><%= player.cell%></td>
+      <td class="narrow"><%= player.points%></td>
+      <td class="narrow"><%= player.negs%></td>
+      <td class="narrow"><%= link_to "Edit", edit_player_path(player) %></td>
+      <td class="narrow"><%= link_to "Remove", player, method: :delete, data: { confirm: "Are you sure?" } %></td>
+    </tr>
+  <% end %>
+  </table>
+
+  <br>
+  <ul class="shifted">
+    <li class="plain"><%= link_to "Add a new player", new_player_path %></li>
+    <li class="plain">&nbsp; | &nbsp;</li>
+    <li class="plain"><%= link_to "Return to options page", home_path %></li>
+  </ul>
 </div>
-
-<table class="players">
-  <tr>
-    <th class="wide">Player</th>
-    <th class="wider">Email</th>
-    <th class="wide">Cell</th>
-    <th class="narrow">Points</th>
-    <th class="narrow">Negs</th>
-    <th class="narrow"></th>
-    <th class="narrow"></th>
-  </tr>
- 
-<% @players.each do |player| %>
-  <tr>
-    <td class="wide"><%= player.first_name %> <%= player.last_name[0] %></td>
-    <td class="wider"><%= player.email%></td>
-    <td class="wide"><%= player.cell%></td>
-    <td class="narrow"><%= player.points%></td>
-    <td class="narrow"><%= player.negs%></td>
-    <td class="narrow"><%= link_to "Edit", edit_player_path(player) %></td>
-    <td class="narrow"><%= link_to "Remove", player, method: :delete, data: { confirm: "Are you sure?" } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br>
-<ul class="shifted">
-  <li class="plain"><%= link_to "Add a new player", new_player_path %></li>
-  <li class="plain">&nbsp; | &nbsp;</li>
-  <li class="plain"><%= link_to "Return to options page", home_path %></li>
-</ul>
-
 

@@ -1,5 +1,6 @@
 .home_base {
   @include outer-container;
+  @include background(radial-gradient(#A9D0F5, #fff ) left repeat);
   padding: 40px 0px 40px 0px;
 }
 
