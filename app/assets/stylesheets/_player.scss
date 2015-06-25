@@ -10,6 +10,10 @@ h1 {
   color: #fff;
 }
 
+.blue {
+  color: $dark-blue;
+}
+
 .outer_player {
   @include outer-container;
   @include background(radial-gradient(#084B8A, #A9D0F5) left repeat);
