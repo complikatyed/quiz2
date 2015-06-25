@@ -4,16 +4,17 @@
 }
 
 .wide_home {
-  @include span-columns(5);
+  @include span-columns(7);
     @include shift(1);
   text-align: center;
 }
 
 .right_home {
-  @include span-columns(5);
+  @include span-columns(3);
 
   img {
     margin-top: 20px;
+    display: inline-block;
     border: solid $dark-blue 5px;
     max-width: 100%;
   }
@@ -22,6 +23,8 @@
 h1.blue {
   font-size: 2em;
   padding-top: 5px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
   text-align: center;
   color: $dark-blue;
 }
@@ -32,7 +35,6 @@ h2.blue {
   text-align: center;
   color: $dark-blue;
 }
-
 
 input#user_name,
      #user_email,
