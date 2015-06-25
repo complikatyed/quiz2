@@ -1,0 +1,48 @@
+.show_main {
+  @include outer-container;
+  padding: 40px 0px 40px 0px;
+}
+
+.show_first {
+  @include span-columns(3);
+    @include shift(1);
+  border: solid $dark-blue 2px;
+  background: #A9D0F5;
+  color: $dark-blue;
+  padding: 10px 0px 30px 0px;
+  margin-top: 20px;
+  text-align: center;
+  h2 {
+    color: #fff;
+  }
+}
+
+.show_second {
+  @include span-columns(7);
+  text-align: center;
+}
+
+.show_second_left {
+  @include span-columns(3 of 7);
+  padding-right: 5px;
+  margin: 0px 5px 0px 50px;
+  text-align: center;
+}
+
+.show_second_right {
+  @include span-columns(3 of 7);
+  padding-left: 5px;
+  text-align:center;
+  margin-right: 20px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.buttonmain {
+  width: 175px;
+  margin-bottom: 25px;
+  padding: 10px 5px;
+}
+
