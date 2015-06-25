@@ -1,10 +1,4 @@
 
-<h1>Create a new player:</h1>
 
-<%= simple_form_for @player, url: player_path, method: :put do |f| %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :email %>
-  <%= f.input :cell %>
-  <%= f.button :submit, "Save Changes" %>
-<% end %>
+<h1>Edit #{@player.first_name}</h1>
+<%= render partial: 'players/form', locals: { player: @player } %>

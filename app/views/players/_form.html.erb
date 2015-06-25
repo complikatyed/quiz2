@@ -1,0 +1,8 @@
+<%= simple_form_for @player do |f| %>
+  <%= f.input_field :first_name, placeholder: "Player's first name", input_html: { class: 'player' }%>
+  <%= f.input_field :last_name, placeholder: "Player's last name", input_html: { class: 'player' }  %>
+  <%= f.input_field :email, placeholder: "Player's email address", input_html: { class: 'player' }  %>
+  <%= f.input_field :cell, placeholder: "Player's cell number - just the ten digits", input_html: { class: 'player' } %>
+  <% button_text = (player.persisted?) ? "Save Changes" : "Player Ready" %>
+  <%= f.button :submit, button_text %>
+<% end %>
