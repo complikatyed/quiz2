@@ -34,11 +34,12 @@
               <% end %>
 
             <% else %>
-              <li class="nav-link seal">
-                <%= image_tag("seal_small.png", :alt => "Hume-Fogg Magnet seal") %>
-              </li>
+
               <li class="nav-link">
                <%= link_to "I'm done for today.", user_session_path, method: :delete %>
+              <li class="nav-link seal">
+                <%= image_tag("seal_small.png", :alt => "Hume-Fogg Magnet seal") %></li>
+              <li class="nav-link">
               </li>
 
             <% end %>
@@ -60,7 +61,7 @@
       <div class="centered-navigation-wrapper">
         <ul class="centered-navigation-menu padded">
           <li class="padded">
-            <%= link_to "View the code on Github -  @complikatyed", "https://github.com/complikatyed/quizlytics" %>
+            <%= link_to "View the code on Github -  @complikatyed", "https://github.com/complikatyed/quizlytics"%>
           </li>
         </ul>
       </div>
