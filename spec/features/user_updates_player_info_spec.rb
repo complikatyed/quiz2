@@ -33,5 +33,11 @@ feature "user updates player info" do
     page.should_not have_content("Points: 0")
     page.should_not have_content("Negs: 0")
     # How is the edit process going to work?
+
+    # Need to add tests for players being edited
+    # Need to add the player fabrications from the other tests, too
+
+
+
   end
 end

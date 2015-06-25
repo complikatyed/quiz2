@@ -25,17 +25,15 @@ feature "user views player list" do
     click_button "Sign me up, coach!"
     page.should have_content("What's the plan, Bob?")
     click_on "View players"
-    page.should have_content("Arturo R")
-    page.should have_content("Tania D")
-    page.should have_content("Sam S")
+    page.should have_link("Arturo R")
+    page.should have_link("Tania D")
+    page.should have_link("Sam S")
     page.should have_content("AR@reyes.com")
     page.should have_content("Talia@yahoo.com")
     page.should have_content("Sam@sillymail.com")
     page.should have_content("9013425431")
     page.should have_content("4041240098")
     page.should have_content("4568822309")
-    page.should have_link("Edit")
-    page.should have_link("Remove")
     page.should have_link("Add a new player")
     page.should have_link("Return to options page")
   end

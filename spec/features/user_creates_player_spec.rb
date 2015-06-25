@@ -35,6 +35,10 @@ feature "user creates player" do
     click_on "Player Ready"
     page.should_not have_content("Billy")
     page.should have_css(".alert", text: "Please fix the errors below to continue.")
+    page.should have_css(".user_first_name .error", "is too short (minimum is 2 characters)")
+    page.should have_css(".user_last_name .error", "is too short (minimum is 2 characters)")
+    page.should have_css(".user_email .error", "must be an email address")
+    page.should have_css(".user_cell .error", "Not a valid 10-digit telephone number")
     page.should_not have_content("bdubs@email")
     page.should_not have_content("6155551212")
     page.should_not have_content("Points: 0")
