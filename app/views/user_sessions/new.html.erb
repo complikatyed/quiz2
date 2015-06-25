@@ -2,7 +2,7 @@
   <h1 class="white"> Welcome Back, Nerd Friend!</h1>
   <h2 class="blue">Please verify your identity below.</h2>
 
-  <div class="wide_home">
+  <div class="left_user_session">
   <%= simple_form_for @user, url: user_session_path do |f| %>
     <%= f.input :email, placeholder: "What's your email address?", input_html: { class: 'user_first' }  %>
     <%= f.input :password, placeholder: "What's your password?", input_html: { class: 'user' }  %>
@@ -10,7 +10,7 @@
   <% end %>
   </div>
 
-  <div class="right_home_user_session">
+  <div class="right_user_session">
     <%= image_tag("quizbowl.jpg", :alt => "Keep Calm and Quiz Bowl") %>
   </div>
 

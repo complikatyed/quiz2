@@ -3,14 +3,15 @@
   padding: 40px 0px 40px 0px;
 }
 
-.wide_home {
-  @include span-columns(7);
+.left_user_session {
+  @include span-columns(6);
+    @include shift(1);
   text-align: center;
-  margin-top: 45px;
+  margin-top: 25px;
 }
 
-.right_home_user_session {
-  @include span-columns(3);
+.right_user_session {
+  @include span-columns(4);
 
   img {
     border: solid $dark-blue 5px;

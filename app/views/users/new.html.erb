@@ -2,7 +2,7 @@
   <h1 class="white"> Welcome New Nerd Friend!</h1>
   <h2 class="blue"> Please sign up below.</h2>
 
-  <div class="wide_home">
+  <div class="left_users"> 
 
     <%= simple_form_for @user do |f| %>
       <%= f.input :name, placeholder: "Choose a username", input_html: { class: 'user_first' }  %>
@@ -14,7 +14,7 @@
     <% end %>
   </div>
 
-  <div class="right_home">
+  <div class="right_users">
     <%= image_tag("buzzer.jpg", :alt => "Hand with quiz bowl buzzer") %>
   </div>
 
