@@ -91,11 +91,12 @@
 
   // The nav items
 
-  .nav-link:first-child {
-    @include media($horizontal-bar-mode) {
-      margin-left: $centered-navigation-item-nudge;
-    }
-  }
+  // .nav-link:first-child {
+  //   @include media($horizontal-bar-mode) {
+  //     margin-left: $centered-navigation-item-nudge;
+  //   }
+  // }
+  
 
   ul li.nav-link {
     background: $centered-navigation-background;

@@ -36,10 +36,11 @@
             <% else %>
 
               <li class="nav-link">
-               <%= link_to "I'm done for today.", user_session_path, method: :delete %>
+                <%= link_to "I'm done for today.", user_session_path, method: :delete %>
               <li class="nav-link seal">
                 <%= image_tag("seal_small.png", :alt => "Hume-Fogg Magnet seal") %></li>
               <li class="nav-link">
+                <%= link_to "See the project code.", "https://github.com/complikatyed/quizlytics" %>
               </li>
 
             <% end %>
