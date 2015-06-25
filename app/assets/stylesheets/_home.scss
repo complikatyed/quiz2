@@ -15,14 +15,14 @@
 
 .wide_home_left {
   @include span-columns(3 of 7);
-  margin: 0px 5px 0px 50px;
+  margin: 30px 5px 0px 50px;
   text-align: center;
 }
 
 .wide_home_right {
   @include span-columns(3 of 7);
   text-align:center;
-  margin-right: 20px;
+  margin: 30px 0px 0px 20px;
 }
 
 img.narrow {
@@ -30,17 +30,22 @@ img.narrow {
   vertical-align: middle;
 }
 
-h1 {
+h1.home_blue {
   font-size: 2em;
-  padding: 20px 0px 20px 0px;
+  padding: 35px 0px 0px 0px;
+  margin-bottom: 15px;
   text-align: center;
   color: $dark-blue;
+}
+
+.buttontop_heavy {
+  width: 175px;
+  margin-top: 15px;
 }
 
 .buttonmain {
   width: 175px;
   margin-bottom: 25px;
-  color: tomato;
 }
 
 

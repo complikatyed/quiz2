@@ -6,15 +6,19 @@ h1 {
   color: #fff;
 }
 
-input {
-  width: 100%;
-  margin-bottom: 25px;
+.white {
+  color: #fff;
 }
 
 .outer_player {
   @include outer-container;
   @include background(radial-gradient(#084B8A, #A9D0F5) left repeat);
 };
+
+.slogan {
+  text-align: center;
+  padding-bottom: 10px;
+}
 
 .center {
   @include span-columns(4);
@@ -26,7 +30,7 @@ input {
   margin-left: 50px;
 }
 .narrow {
-  width: 60px;
+  width: 100px;
 }
 
 .wide {
@@ -44,5 +48,14 @@ input {
 
 .shifted {
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
+}
+
+input#player_first_name,
+     #player_last_name,
+     #player_email,
+     #player_cell,
+     .btn {
+  width: 100%;
+  margin-bottom: 25px;
 }
