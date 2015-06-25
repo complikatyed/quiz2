@@ -1,11 +1,11 @@
-<div class="home_base">
-  <h1 class="user_session"> Welcome Back, Nerd Friend!</h1>
+<div class="users_base">
+  <h1 class="white"> Welcome Back, Nerd Friend!</h1>
+  <h2 class="blue">Please verify your identity below.</h2>
 
   <div class="wide_home">
-  <h2 class="user_session">Please verify your identity:</h2>
   <%= simple_form_for @user, url: user_session_path do |f| %>
-    <%= f.input_field :email, placeholder: "What's your email address?", input_html: { class: 'user' }  %>
-    <%= f.input_field :password, placeholder: "What's your password?", input_html: { class: 'user' }  %>
+    <%= f.input :email, placeholder: "What's your email address?", input_html: { class: 'user_first' }  %>
+    <%= f.input :password, placeholder: "What's your password?", input_html: { class: 'user' }  %>
     <%= f.button :submit, "Let's do this!", class: "user" %>
   <% end %>
   </div>

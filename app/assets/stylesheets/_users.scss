@@ -1,5 +1,6 @@
-.home_base {
+.users_base {
   @include outer-container;
+  @include background-image(asset-url('blue_texture2.jpg'));
   padding: 40px 0px 40px 0px;
 }
 
@@ -13,20 +14,18 @@
   @include span-columns(3);
 
   img {
-    margin-top: 20px;
+    margin-top: 30px;
     display: inline-block;
     border: solid $dark-blue 5px;
     max-width: 100%;
   }
 }
 
-h1.blue {
+h1.white {
   font-size: 2em;
   padding-top: 5px;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
   text-align: center;
-  color: $dark-blue;
+  color: #fff;
 }
 
 h2.blue {
@@ -36,11 +35,3 @@ h2.blue {
   color: $dark-blue;
 }
 
-input#user_name,
-     #user_email,
-     #user_password,
-     #user_password_confirmation,
-     .btn.user {
-  width: 60%;
-  margin-bottom: 25px;
-}

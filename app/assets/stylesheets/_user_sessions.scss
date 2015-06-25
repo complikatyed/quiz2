@@ -6,13 +6,13 @@
 .wide_home {
   @include span-columns(7);
   text-align: center;
+  margin-top: 45px;
 }
 
 .right_home_user_session {
   @include span-columns(3);
 
   img {
-    margin-top: 20px;
     border: solid $dark-blue 5px;
     max-width: 100%;
   }
@@ -32,11 +32,4 @@ h1.user_session {
 h2.user_session {
   font-size: 1em;
   margin: 30px 0px;
-}
-
-input#user_email,
-     #user_password,
-     .btn {
-  width: 60%;
-  margin-bottom: 25px;
 }
