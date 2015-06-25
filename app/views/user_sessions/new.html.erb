@@ -1,11 +1,11 @@
 <div class="home_base">
   <h1 class="user_session"> Welcome Back, Nerd Friend!</h1>
-  
+
   <div class="wide_home">
   <h2 class="user_session">Please log in.</h2>
   <%= simple_form_for @user, url: user_session_path do |f| %>
-    <%= f.text_field :email, placeholder: "What's your email address?", input_html: { class: 'user' }  %>
-    <%= f.text_field :password, placeholder: "What's your password?", input_html: { class: 'user' }  %>
+    <%= f.input_field :email, placeholder: "What's your email address?", input_html: { class: 'user' }  %>
+    <%= f.input_field :password, placeholder: "What's your password?", input_html: { class: 'user' }  %>
     <%= f.button :submit, "Let's do this!" %>
   <% end %>
   </div>
@@ -14,4 +14,4 @@
     <%= image_tag("quizbowl.jpg", :alt => "Keep Calm and Quiz Bowl") %>
   </div>
 
-</div> 
+</div>
