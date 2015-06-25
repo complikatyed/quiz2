@@ -5,5 +5,6 @@
     <h3 class="white">Please make any necessary edits below:</h3>
 
     <%= render partial: 'players/form', locals: { player: @player } %>
+    <%= button_to "Remove This Player", @player, method: :delete, data: { confirm: "Are you sure?" }, class: 'player' %>
   </div>
 </div>

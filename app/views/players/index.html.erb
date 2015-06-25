@@ -8,19 +8,15 @@
       <th class="wide">Cell</th>
       <th class="narrow">Points</th>
       <th class="narrow">Negs</th>
-      <th class="narrow"></th>
-      <th class="narrow"></th>
     </tr>
-   
+
   <% @players.each do |player| %>
     <tr>
-      <td class="wide"><%= player.first_name %> <%= player.last_name[0] %></td>
+      <td class="wide"><%= link_to "#{player.first_name} #{player.last_name[0]}", edit_player_path(player) %></td>
       <td class="wider"><%= player.email%></td>
       <td class="wide"><%= player.cell%></td>
       <td class="narrow"><%= player.points%></td>
       <td class="narrow"><%= player.negs%></td>
-      <td class="narrow"><%= link_to "Edit", edit_player_path(player) %></td>
-      <td class="narrow"><%= link_to "Remove", player, method: :delete, data: { confirm: "Are you sure?" } %></td>
     </tr>
   <% end %>
   </table>

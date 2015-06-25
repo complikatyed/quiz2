@@ -19,14 +19,16 @@ h1 {
   @include background(radial-gradient(#084B8A, #A9D0F5) left repeat);
 };
 
-.slogan {
-  text-align: center;
-  padding-bottom: 10px;
-}
+.outer_player1 {
+  @include outer-container;
+  @include background(linear-gradient(#A9D0F5, #fff ) left repeat);
+};
+
 
 .center {
   @include span-columns(4);
     @include shift(4);
+  padding-bottom: 30px;
 }
 
 .players {
@@ -34,7 +36,8 @@ h1 {
   margin-left: 50px;
 }
 .narrow {
-  width: 100px;
+  width: 120px;
+  text-align: center;
 }
 
 .wide {
@@ -42,7 +45,7 @@ h1 {
 }
 
 .wider {
-  width: 250px;
+  width: 275px;
 }
 
 .plain {
