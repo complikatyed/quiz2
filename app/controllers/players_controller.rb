@@ -1,4 +1,5 @@
 class PlayersController < ApplicationController
+  before_filter :initialize_player
 
   def new
     @player = Player.new
@@ -43,6 +44,17 @@ class PlayersController < ApplicationController
   end
 
     protected
+
+  def initialize_player
+    if params[:id].present?
+      @player = Player.find(params[:id])
+    else
+      @player = Player.new
+    end
+    if params[:player].present?
+      @player.assign_attributes(player_params)
+    end
+  end
 
 
   def player_params
