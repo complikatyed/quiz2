@@ -28,5 +28,15 @@ feature "user views player list" do
     page.should have_content("Arturo R")
     page.should have_content("Tania D")
     page.should have_content("Sam S")
+    page.should have_content("AR@reyes.com")
+    page.should have_content("Talia@yahoo.com")
+    page.should have_content("Sam@sillymail.com")
+    page.should have_content("9013425431")
+    page.should have_content("4041240098")
+    page.should have_content("4568822309")
+    page.should have_link("Edit")
+    page.should have_link("Remove")
+    page.should have_link("Add a new player")
+    page.should have_link("Return to options page")
   end
 end
