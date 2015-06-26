@@ -75,7 +75,7 @@
     display: none;
     margin: 0 auto;
     overflow: visible;
-    padding: 0;
+    padding: 10px;
     width: 100%;
     z-index: 99999;
 
@@ -96,7 +96,6 @@
   //     margin-left: $centered-navigation-item-nudge;
   //   }
   // }
-  
 
   ul li.nav-link {
     background: $centered-navigation-background;
@@ -104,7 +103,7 @@
     line-height: $centered-navigation-height;
     overflow: hidden;
     text-align: right;
-    width: 100%;
+    width: 150px;
     z-index: 9999;
 
     a {
@@ -132,8 +131,9 @@
 
   ul.padded,
   li.padded {
-    padding-top: 10px;
+    padding: 10px 0px;
     font-family: Diplomata;
+    vertical-align: middle;
   }
 
   li.seal.nav-link {
