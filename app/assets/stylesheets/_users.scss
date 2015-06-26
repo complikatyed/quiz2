@@ -1,6 +1,6 @@
 .users_base {
   @include outer-container;
-  @include background-image(asset-url('blue_texture2.jpg'));
+  @include background(radial-gradient(#084B8A, #A9D0F5) left repeat);
   padding: 40px 0px 40px 0px;
 }
 
@@ -35,3 +35,6 @@ h2.blue {
   color: $dark-blue;
 }
 
+label#new_user {
+  display: none;
+}
