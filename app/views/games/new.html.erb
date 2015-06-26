@@ -1,0 +1,9 @@
+<div class="show_main">
+
+  <h3>Here are the available players:</h3>
+  <%= simple_form_for @game do |f| %>
+    <%= f.association :players, as: :check_boxes %>
+    <%= f.button :submit, "Save Game", class: 'user' %>
+  <% end %>
+
+</div>
