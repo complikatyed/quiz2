@@ -8,7 +8,7 @@ class PlayersController < ApplicationController
   def create
     @player = Player.new(player_params)
     if @player.save
-      redirect_to player_path(@player),  notice: "Player information was successfully saved."
+      redirect_to player_path(@player)
     else
       flash.alert = "Please fix the errors below to continue."
       render :new
