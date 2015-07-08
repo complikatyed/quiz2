@@ -40,8 +40,9 @@ class PlayersController < ApplicationController
     if @player.present?
       @player.destroy
   end
-    redirect_to players_path, notice: "#{@player.first_name} has been removed."
+    redirect_to players_path, notice: "#{@player.fullname} has been removed."
   end
+
 
     protected
 
@@ -56,11 +57,8 @@ class PlayersController < ApplicationController
     end
   end
 
-
   def player_params
     params.require(:player).permit(:first_name, :last_name, :email, :cell)
   end
-
-
 
 end

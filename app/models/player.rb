@@ -16,6 +16,10 @@ class Player < ActiveRecord::Base
 
   before_validation :set_defaults,  on: :create
 
+  def fullname
+    "#{first_name} #{last_name}"
+  end
+
   private
 
   def set_defaults
