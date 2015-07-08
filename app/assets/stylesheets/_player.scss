@@ -35,6 +35,15 @@ h1 {
   width: 75%;
   margin-left: 50px;
 }
+
+
+label.string.required,
+label.email.required,
+label.password.required {
+  display: none;
+}
+
+
 .narrow {
   width: 120px;
   text-align: center;
@@ -52,6 +61,7 @@ h1 {
   list-style-type: none;
   display: inline;
 }
+
 
 .shifted {
   text-align: center;
