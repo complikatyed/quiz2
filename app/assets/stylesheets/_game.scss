@@ -32,3 +32,8 @@ li.block {
   @include span-columns(3);
   @include omega(4n);
 }
+
+label.collection_check_boxes {
+  display: inline-block;
+  padding-left: 3px;
+}
